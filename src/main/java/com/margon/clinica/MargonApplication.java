@@ -11,8 +11,8 @@ public class MargonApplication extends Application {
 	@Override
 	public void start(Stage stage) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(MargonApplication.class.getResource("clinica.fxml"));
-		Scene scene = new Scene(fxmlLoader.load(), 520, 400);
-		stage.setTitle("Form");
+		Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
+		stage.setTitle("Clínica Margon");
 		stage.setScene(scene);
 		stage.show();
 	}
