@@ -4,16 +4,20 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 
-@SpringBootApplication
-public class MargonApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(MargonApplication.class, args);
+public class MargonApplication extends Application {
+	@Override
+	public void start(Stage stage) throws IOException {
+		FXMLLoader fxmlLoader = new FXMLLoader(MargonApplication.class.getResource("clinica.fxml"));
+		Scene scene = new Scene(fxmlLoader.load(), 520, 400);
+		stage.setTitle("Form");
+		stage.setScene(scene);
+		stage.show();
 	}
 
+	public static void main(String[] args) {
+		launch();
+	}
 }
